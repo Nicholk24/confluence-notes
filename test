@@ -1,0 +1,340 @@
+Confluence: Creating Technical Documentation Space
+•	 Confluence is a wiki used to develop and publish technical documentation. First, create a wiki space for technical documentation: Add a space and select the Documentation theme.
+•	Set the space permissions.
+•	Change the title and content of the space home page.
+•	Customize the Documentation theme.
+•	Create an inclusions library to manage your re-usable content.
+•	Create the table of contents for your manual or manuals, by adding top-level pages for all the usual sections (user's guide, administrator's guide, and so on).
+•	Customize your PDF layout and stylesheet, if required.
+•	Hint: Now that you have a good skeleton for a documentation space, save the space as a template space.
+The rest of this page gives more details of the above procedure.
+Step 1. Add your space
+Below is a quick guide to adding a space. See Create a Space for a full description.
+1.	Go to the Confluence dashboard and choose Create Space > Blank Space.
+Hint: If you cannot see Create Space, this means that you do not have permission to add spaces. Please contact your Confluence administrator.
+2.	Choose Next then enter a space name and a short, unique space key.
+3.	Leave the permission settings as default, or choose to allow only yourself to view or contribute content to this space. You can change these settings later and with more flexible options.
+4.	Choose Create.
+5.	Your new space appears. Choose Space Tools in the sidebar.
+6.	Choose Look and Feel > Themes and select the Documentation theme.
+7.	Choose OK.
+The home page of your new space will appear. Because you created the space, you are the space administrator. Now you can do some basic configuration, as described in the sections below. From this point on, instructions will refer to navigating in the Documentation theme, which is slightly different to the default theme.
+Step 2. Set the space permissions
+Define the space permissions to determine who can do what in your new space.
+1.	Choose Browse > Space Admin from the header
+Note: The Space Admin option appears only if you have space admin permissions, or if you're part of the 'confluence-administrators' group.
+2.	Choose Permissions.
+3.	Choose Edit Permissions.
+4.	Set the permissions to suit your needs then choose Save All.
+
+o	You can add groups and/or individual users to the list, then select the permissions for each group or user.
+o	You can also set the permissions for anonymous users – these are people who have not logged in to the wiki. Anonymous access is available only if enabled for the entire Confluence site.
+o	Note that you can change these permissions at any time. You may want to restrict the permissions to specific groups now, and later open the space to more people.
+A bit more about permissions
+Confluence has a robust and granular permissions scheme that you can use to determine who can view, comment on and even update the documentation. There are three levels of permissions in Confluence:
+•	Global permissions apply across the entire site.
+•	Space permissions apply to a space.
+•	Page restrictions allow you to restrict the editing and/or viewing of a specific page. Below we discuss a way of using these in the draft, review and publishing workflow.
+Space permissions in Confluence are simple yet granular enough to be useful for technical documentation. You can:
+•	Use the permission levels to control who can create pages in the space, delete pages, create comments, delete comments, administer the space, and so on.
+•	Grant a permission level to one or more users, and/or to one or more groups, and/or to anonymous users.
+Terminology:
+•	'Anonymous' means people who have not logged in to the wiki.
+•	The 'confluence-users' group is the default group into which all new users are assigned (this group may also be called 'users'). Everyone who can log in to Confluence is a member of this group.
+For example, you might allow your team full edit and administration rights while others can only add comments. Or you might grant the general public access to your documentation, while only staff members can update it.
+ 
+For detailed information, see the documentation on:
+•	Global permissions
+•	Space permissions
+•	Page restrictions
+•	Users and groups
+Step 3. Customize the title and content of the space home page
+When you created your space, Confluence created a home page with default content and a default title. You will want to change the title and content.
+1.	Go to your space home page.
+2.	By default, the page title is 'X Home', where 'X' is the name you gave the space.
+3.	Choose Edit.
+4.	The page opens in the editor. Change the title to suit your needs.
+
+ 
+5.	Update the content to suit your needs.
+Hint: If you do not know what to add yet, just add a short description. You can refine the content of the page later. Take a look at an example of a home page.
+6.	Choose Save.
+Step 4. Customise the Documentation theme
+When you added the space you chose the Documentation theme, which provides a left-hand navigation bar and a good look and feel for technical documentation. If necessary, you can configure the Documentation theme to add your own page header and footer or to customize the default left-hand navigation bar. These customizations affect the online look and feel of your documentation. See Configuring the Documentation Theme for the full description.
+1.	Choose Browse > Space Admin. (If you have not yet applied the Documentation theme choose Space Tools >Look and Feel > Themes.)
+2.	Choose Themes in the left menu.
+3.	If the space is not yet using the Documentation theme, apply the theme now.
+4.	Choose Configure theme.
+ 
+5.	The 'Documentation Theme Configuration' screen appears. Customize the left-hand navigation bar, header and footer to suit your needs. Details are in the documentation. Here are some hints:
+
+o	The Page Tree check box determines whether your space will display the default search box and table of contents (page tree) in the left-hand panel.
+o	The Limit search results to the current space check box determines whether Confluence will search only the current space or the whole Confluence site. This setting affects the default search. Viewers can override it each time they do a search.
+o	Enter text, images, macros and other wiki markup into any or all of the three text boxes for the left-hand navigation bar, header and footer. You can use the Include macro and the Excerpt Include macro to include re-usable content.
+o	Any content you add to the navigation panel will appear above the default page tree.
+o	If you like, you can remove the default page tree (by unticking the box) and add your own, customized version of the Pagetree macro instead.
+6.	Choose Save.
+Example of a customized footer
+Take a look at the footer of a page in the Crowd documentation space.
+ 
+To produce the above footer, we have the following content in the footer panel in the Documentation theme configuration screen:
+ 
+Here it is in text form:
+ 
+The above content consists of two Include macros.
+•	The first macro includes a page called _Documentation Footer. This page contains the big blue buttons and hyperlinked text.
+•	The second macro includes a page from a different space, the ALLDOC space, called _Copyright Notice. This page includes our standard copyright notice, used in all our documentation spaces.
+Step 5. Create an inclusions library
+In Confluence, you can dynamically include content from one page into another page. You can include a whole page into another one, using the Include macro. You can also define an ‘excerpt’ on a page, and then include that excerpted text into another page using the Excerpt Include macro.
+To organize your re-usable content, we recommend that you create a set of pages called an 'inclusions library'.
+1.	Choose Create and create a new page in your space.
+2.	Enter a suitable title. We use '_InclusionsLibrary'. The unusual format of the title helps to let people know this page is special.
+3.	Enter some content and save the page. We enter text explaining the purpose of the inclusions library and how to re-use the content. You can copy our text by clicking through to one of the example pages listed below.
+4.	Choose Browse > Pages and drag your new page above the space homepage. 
+5.	Go to your new inclusions page and choose Create to add child pages containing your re-usable content. See the examples of our own inclusions libraries listed in the examples below.
+
+  
+
+Some notes about inclusions libraries:
+•	The inclusions library is not a specific feature of Confluence. The pages in the inclusions library are just like any other Confluence page.
+•	The pages are located at the root of the wiki space, not under the home page. This means that they will not appear in the table of contents on the left and they will not be picked up by the search in the left-hand navigation bar either.
+•	The pages will be picked up by other searches, because they are just normal wiki pages.
+•	We have decided to start the page name with an underscore. For example, '_My Page Name'. This indicates that the page is slightly unusual, and will help prevent people from changing the page name or updating the content without realizing that the content is re-used in various pages.
+Examples of inclusions libraries
+Here are some examples in our documentation:
+•	Crowd inclusions library
+•	Confluence inclusions library
+Step 6. Create the table of contents
+Create the table of contents for your documentation, by adding the top-level pages for all the usual sections:
+•	User's guide
+•	Administrator's guide
+•	Installation guide
+•	Configuration guide
+•	Release notes
+•	FAQ
+•	Whatever else you need
+Follow these steps to create the table of contents:
+1.	Go to your space home page.
+2.	Choose Create to add a page as a child of the homepage.
+3.	Type the page title, 'User's Guide'.
+4.	Type the content of the page.
+Hint: If you do not know what to add yet, just add a short description then refine the content of the page later. If you like, you can add the Children macro. That will act as a table of contents on the page once you have added child pages.
+5.	Choose Save.
+Now do the same for all the sections of your technical document.
+Step 7. (Optional) Customize the PDF layout and stylesheet
+If you are planning to provide PDF versions of your documentation, you may want to customize the PDF layout and styles for your space. You can skip this step for now and do it later, if you prefer. The instructions are in a separate section of this guide, dedicated to PDF. See Providing PDF Versions of your Technical Documentation.
+Step 8. Save your new space as a template
+This is a useful suggestion. Once you have set up your first documentation space and are more-or-less happy with it, use the Copy Space add-on (see notes below) to copy the space while it still has very little content. From this point on, you can copy it each time you want to create a new documentation space.
+1.	Choose Browse > Space Admin
+2.	Choose Copy Space in the left menu
+Hint: If you cannot see the 'Copy Space' option, this means that the add-on is not installed on your Confluence site. Refer to the documentation on installing add-ons. (Not applicable to Confluence Cloud.)
+3.	The 'Copy Space' screen will appear. Enter the details as prompted, to copy your space to another new space.
+
+ 
+
+4.	Choose Save.
+You now have a template space. From this point on, you can use the Copy Space add-on to copy the template space each time you want to create a new documentation space.
+
+Notes:
+•	The Copy Space add-on is not covered by Atlassian support. However, the Atlassian technical writers use it for all our documentation. If you like, you can vote for a comment on the request for Atlassian support to cover this add-on: CONF-14198.
+•	Your site administrator will need to install the Copy Space add-on into Confluence. Refer to the documentation on installing. Not applicable to Confluence Cloud.
+Next Steps
+You now have the basic structure and configuration for your technical documentation space. You have also created a handy template to use next time you need a space. What next? Take a look at Using Templates in Technical Documentation
+
+
+
+Getting Started with Confluence
+ 
+
+Confluence Documentation Home
+Confluence Server 5.7
+Confluence is where you create, organize and discuss work with your team. Capture the knowledge that's too often lost in email inboxes and shared network drives in Confluence instead – where it's easy to find, use, and update. Give every team, project, or department its own space to create the things they need, whether it's meeting notes, product requirements, file lists, or project plans, you can get it done in Confluence.
+
+ 
+
+Your Confluence
+Confluence is very flexible; not only in the many ways you can create and share content, but also in how you can tailor your own Confluence experience. Things like your profile picture, favorite spaces and pages, and your personal space can say a lot about you, and can also make navigating Confluence much quicker and easier. Even a simple thing like adding shortcut links to the sidebar of your personal space, can save you a lot of time in finding the things you use all the time.
+Set up your personal space, and take a look at any of the pages below, to start making Confluence feel like home.
+•	Your User Profile
+•	Change Your Password
+•	Edit Your User Settings
+•	Set Your Profile Picture
+•	Choose Your Home Page
+•	Favorite Spaces and Pages
+•	View and Revoke OAuth Access Tokens
+•	Request Add-ons
+
+
+
+
+Confluence: The Hive
+There are two main ways to develop with Confluence — using our remote API or developing a plugin. If you are integrating Confluence with another application, you will most likely want to use the remote API. If you wish to add capabilities to Confluence, a plugin may be the answer. To get started writing plugins, we recommend that you download the plugin SDK and follow the instructions to set up a plugin development environment.
+
+Confluence Best Practices
+Confluence is enterprise wiki software. Written in Java and mainly used in corporate environments, Confluence is developed and marketed by Atlassian. Confluence is sold as either on-premises software or as a hosted solution. Content Collaboration Tool for teams to create, share, and discuss rich content - projects, documentation, files, ideas, minutes, specs, diagrams, mockups, anything. (2012, Moseley)
+
+Guidelines for Dividing Content into Spaces and Pages
+To ensure maintainable and logical spaces, consider the following points when allocating your content to pages and spaces:
+•	Group the content by topic, subject, project or team.
+•	Evaluate permissions across the wiki content. If members require conflicting access, for example John must access content on topics A and B, while Jane must access content for topics B and C, then the topics should be separated into three spaces.
+Useful notes about spaces and pages:
+•	Spaces cannot be nested. You cannot have parent and child spaces, but you can have parent and child pages within a space.
+•	Page permissions can prevent users from accessing a specific page, even though they have permission to access the space.
+•	Page permissions alone cannot keep the existence of a page secret. The page should be in a restricted space instead.
+•	Pages can be moved between spaces.
+•	You can group related spaces, using space categories (tabs).
+
+Crowd Documentation: Getting Started
+This quick-start guide assumes that you have installed and set up JIRA and/or Confluence and now wish to set up Crowd for user management in one or both of them.
+•	If you want to use JIRA or Confluence but have not yet installed them, please follow the instructions in JIRA 101 and/or Confluence 101 before configuring Crowd.
+•	If you want to use Crowd with other applications but not JIRA or Confluence, please follow the detailed Crowd installation and setup guide rather than this 'Crowd 101' guide.
+Getting Started
+1. Installing Crowd
+  First things first. If you have not already got Crowd up and running, carry out the following steps:
+  For Windows: (click to expand)
+1.	Go to the Atlassian download center.
+2.	Download the ZIP archive file for the Crowd distribution (not EAR-WAR).
+3.	Unzip the zip archive into a directory of your choice, avoiding spaces in the directory name.
+4.	Tell Crowd where to find its Crowd Home directory, by editing the crowd-init.properties file as described in the installation guide.
+5.	Set up your database as described in the database configuration guide.
+ This quick-start page assumes that you have an existing JIRA or Confluence application. So we recommend that you connect Crowd to a production-ready database and not HSQLDB. But if you are evaluating Crowd, it is fine to use HSQLDB and then move to a different database later. In that case, you do not need to do anything in this step, because Crowd contains everything you need.
+6.	Start your Crowd server by going to the directory where you unzipped Crowd and running start_crowd.bat.
+7.	To access Crowd, go to your web browser and type this address: http://localhost:8095/crowd.
+8.	Follow the Setup Wizard. This will guide you through the process of setting up your Crowd server and creating an admin user.
+For more help on the technical procedures in this section, please refer to the Crowd installation guide.
+If you need assistance, please create a support ticket.
+  For Mac: (click to expand)
+1.	Go to the Atlassian download center.
+2.	Click the 'Mac OS X' tab and download the TAR.GZ archive file for the Crowd distribution (not EAR-WAR).
+3.	Unzip the archive into a directory of your choice, avoiding spaces in the directory name.
+4.	Tell Crowd where to find its Crowd Home directory, by editing the crowd-init.properties file as described in the installation guide.
+5.	Set up your database as described in the database configuration guide.
+ This quick-start page assumes that you have an existing JIRA or Confluence application. So we recommend that you connect Crowd to a production-ready database and not HSQLDB. But if you are evaluating Crowd, it is fine to use HSQLDB and then move to a different database later. In that case, you do not need to do anything in this step, because Crowd contains everything you need.
+6.	Start your Crowd server by going to the directory where you unzipped Crowd and double-clicking start_crowd.sh.
+7.	To access Crowd, go to your web browser and type this address: http://localhost:8095/crowd.
+8.	Follow the Setup Wizard. This will guide you through the process of setting up your Crowd server and creating an admin user.
+For more help on the technical procedures in this section, please refer to the Crowd installation guide.
+If you need assistance, please create a support ticket.
+  For UNIX or Linux: (click to expand)
+1.	Go to the Atlassian download center.
+2.	Click the 'Linux' tab and download the TAR.GZ Archive file for the Crowd distribution (not EAR-WAR).
+3.	Unzip the archive into a directory of your choice, avoiding spaces in the directory name.
+4.	Tell Crowd where to find its Crowd Home directory, by editing the crowd-init.properties file as described in the installation guide.
+5.	Set up your database as described in the database configuration guide.
+ This quick-start page assumes that you have an existing JIRA or Confluence application. So we recommend that you connect Crowd to a production-ready database and not HSQLDB. But if you are evaluating Crowd, it is fine to use HSQLDB and then move to a different database later. In that case, you do not need to do anything in this step, because Crowd contains everything you need.
+6.	Start your Crowd server by going to the directory where you unzipped Crowd and double-clicking start_crowd.sh.
+7.	To access Crowd, go to your web browser and type this address: http://localhost:8095/crowd.
+8.	Follow the Setup Wizard. This will guide you through the process of setting up your Crowd server and creating an admin user.
+For more help on the technical procedures in this section, please refer to the Crowd installation guide.
+If you need assistance, please create a support ticket.
+2. Adding Users and Groups
+Crowd is designed to help you manage users and groups across multiple applications. Your next step is to configure a user directory in Crowd to contain your JIRA and/or Confluence users and groups.
+  If you are starting out from scratch with a new JIRA and a new Confluence site: (click to expand)
+1.	Add a Crowd directory — Add a Crowd Internal directory to contain all your JIRA and Confluence users.
+2.	Add the Confluence groups — Add the 'confluence-users' and 'confluence-administrators' groups to your new directory.
+3.	Add the JIRA groups — Add the 'jira-users', 'jira-developers' and 'jira-administrators' groups to your new directory.
+4.	Import your users from a CSV file or add them manually.
+5.	Add the users to the groups — Use Crowd's bulk user management to add all the users to the 'confluence-users' and 'jira-users' groups. Also add any administrators to the administration groups and add the developers to the 'jira-developers' group. For more details about the permissions applicable to each group, refer to the Confluence and JIRA documentation.
+  If you have existing JIRA and Confluence sites, each currently managing its own set of users internally: (click to expand)
+If your JIRA users are currently managed via JIRA's internal management and your Confluence users are managed separately via Confluence's internal management, you can use Crowd to simplify and centralize your user and group management:
+1.	Add a Crowd directory — Use the Crowd Administration Console to add a Crowd Internal directory to contain all your JIRA and Confluence users.
+2.	Import the users and groups from Confluence — Use the Crowd importer to copy your users and groups from Confluence into the new Crowd directory. This process will also copy the group memberships into Crowd.
+3.	Import the users and groups from JIRA — Use the Crowd importer to copy your users and groups from JIRA into the same Crowd directory as the Confluence users. This process will add any additional users and groups from JIRA and update the existing Confluence users with their JIRA group memberships.
+4.	Check your users and groups in Crowd — Use Crowd's group browser to check that your users, groups and group memberships are available as expected in Crowd.
+  If you have existing JIRA and Confluence sites, with all users currently managed internally in JIRA: (click to expand)
+If your JIRA and Confluence users are currently all managed via JIRA's internal management, you can use Crowd to simplify and centralize your user and group management:
+1.	Add a Crowd directory — Use the Crowd Administration Console to add a Crowd Internal directory to contain all your JIRA and Confluence users.
+2.	Import the users and groups from JIRA — Use the Crowd importer to copy your users and groups from JIRA into the new Crowd directory. This process will also copy the group memberships into Crowd.
+3.	Check your users and groups in Crowd — Use Crowd's group browser to check that your users, groups and group memberships are available as expected in Crowd.
+  If you have existing JIRA and Confluence sites, with all users currently managed in an LDAP directory: (click to expand)
+If your users are in a corporate LDAP directory, you can choose whether you want to store your groups in LDAP or in Crowd.
+•	If you want to store your users and groups in LDAP:
+1.	Add a Crowd LDAP directory connector — Choose the options for your specific version of LDAP, such as Microsoft Active Directory or Novell eDirectory. Crowd supports a number of LDAP flavours, as listed in the documentation.
+2.	Check your users and groups in Crowd — Use Crowd's group browser to check that your users, groups and group memberships are available as expected in Crowd.
+•	If you want to store your users in LDAP and your groups in Crowd:
+1.	Add a Crowd Delegated Authentication directory — Choose the options for your specific version of LDAP, such as Microsoft Active Directory or Novell eDirectory. Crowd supports a number of LDAP flavours, as listed in the documentation.
+2.	Add the Confluence groups — Add the 'confluence-users' and 'confluence-administrators' groups to your new Crowd Delegated Authentication directory.
+3.	Add the JIRA groups — Add the 'jira-users', 'jira-developers' and 'jira-administrators' groups to your new Crowd Delegated Authentication directory.
+4.	Add the users to the groups — Use Crowd's bulk user management to add all the users to the 'confluence-users' and 'jira-users' groups. Also add any administrators to the administration groups and add the developers to the 'jira-developers' group. For more details about the permissions applicable to each group, refer to the Confluence and JIRA documentation.
+  If none of the above scenarios matches your requirements: (click to expand)
+Take the following steps, choosing your directory and other options as indicated in the linked documentation:
+1.	Add a Crowd directory — Choose the directory type you need to contain all your JIRA and Confluence users.
+2.	Add your users and groups either via Crowd's importer or manually:
+•	Import your users and groups into Crowd.
+•	Or do it manually:
+a.	Add the users.
+b.	Add the Confluence groups — Add the 'confluence-users' and 'confluence-administrators' groups to your new directory.
+c.	Add the JIRA groups — Add the 'jira-users', 'jira-developers' and 'jira-administrators' groups to your new directory.
+d.	Add the users to the groups — Use Crowd's bulk user management to add all the users to the 'confluence-users' and 'jira-users' groups. Also add any administrators to the administration groups and add the developers to the 'jira-developers' group. For more details about the permissions applicable to each group, refer to the Confluence and JIRA documentation.
+ If you have Confluence or JIRA, but not both, pick the scenario above that best matches your requirements, then just skip the steps for the application that you do not need.
+3. Connecting the Applications
+Crowd manages your users' access to your applications and makes single sign-on (SSO) possible. (More about SSO below.) For this to happen, you need to tell Crowd about the applications and to copy some Crowd libraries into the applications' installation folders.
+1.	Add Confluence — Add the Confluence application to Crowd, following the instructions in the Add Application Wizard.
+•	Choose 'Confluence' as the application type.
+•	In the 'Directories' step, choose the user directory you added for Confluence.
+•	In the 'Authorization' step, allow all users to authenticate.
+2.	Configure the Crowd libraries in Confluence — Copy the Crowd client libraries into your Confluence folders and configure the properties files as described on the Confluence integration page.
+3.	Now add JIRA — Add the JIRA application to Crowd, following the instructions in the Add Application Wizard.
+•	Choose 'JIRA' as the application type.
+•	In the 'Directories' step, choose the user directory you added for JIRA.
+•	In the 'Authorization' step, allow all users to authenticate.
+4.	Configure the Crowd libraries in JIRA — Copy the Crowd client libraries into your JIRA folders and configure the properties files as described on the JIRA integration page.
+ We will call these your 'Crowd-connected applications'.
+Mastering the Basics
+4. Examining your Crowd Server Setup
+Go to the System Information screen in Crowd's Administration Console to find useful information about your Crowd server, such as the location of your Crowd Home directory, information about your database and JVM, and your license server ID.
+5. Managing SSO
+If you have configured single sign-on (SSO) when setting up your Crowd-connected applications (JIRA and Confluence) in step 3 above, your users will only need to log in or log out once, to Crowd or any Crowd-connected application. When they start another Crowd-connected application, they will be logged in automatically. Similarly, when they log out of Crowd or one of the Crowd-connected applications, they will be logged out of Crowd and the other application(s) at the same time.
+•	Overview of SSO — An overview of Crowd's SSO capabilities, plus links to detailed information.
+•	Configuring Trusted Proxy Servers — If you are running applications behind one or more proxy servers, you may find it useful to configure Crowd to trust the proxies' IP addresses.
+Managing your Users' Experience of Crowd
+ Your users will need to access Crowd at http://<Crowd machine name>:8095/crowd (not http://localhost:8095/crowd).
+6. Testing a User's Login
+  Why would I do this? (click to expand)
+You may want to test a user's login to a specific application if the user has reported problems with logging in, or if you have just set up the first user to access a new application. The test verifies whether a user will be able to log in to a given application, based on the application, directory and group associations in Crowd.
+  How do I do this? (click to expand)
+Go to the application's 'Authentication Test' tab in the Crowd Administration Console, as described in the documentation. The documentation also describes the possible error messages and the steps you can take to resolve any problems.
+7. Changing or Resetting a User's Password
+  Why would I do this? (click to expand)
+You may need to change or reset someone's password, if they have forgotten their password or if someone else has come to know the password.
+ Crowd users can change or reset their own passwords too. See the user documentation. To allow this, you need to grant them Crowd user rights, as described below.
+  How do I do this? (click to expand)
+Go to the 'User Details' screen in the Crowd Administration Console, as described in the documentation.
+If you have configured an email server and a notification template, Crowd will send the user an email about their new password.
+8. Setting Up User Aliases
+  Why would I do this? (click to expand)
+Aliases are useful if the same person has different usernames in JIRA and Confluence. You can define the user just once in Crowd, and allocate one or more aliases for the different applications that the user can access.
+  How do I do this? (click to expand)
+The documentation has the full details. In summary:
+1.	Make sure that aliasing is enabled for JIRA and Confluence, on the application's 'Options' screen.
+2.	Add the appropriate alias for each user, on the user's 'Applications' screen.
+9. Granting Crowd User Rights to Someone
+  Why would I do this? (click to expand)
+You can give your users access to Crowd's Self-Service Console, where they can edit their own profile, change their password and see the applications they are allowed to access. They can read the Crowd User Guide for guidance.
+  How do I do this? (click to expand)
+Make sure that the person's username is in a user directory where all users are authorised to use Crowd. Please refer to the documentation for details.
+10. Granting Crowd Administrator Rights to Someone
+  Why would I do this? (click to expand)
+When you first set up Crowd, you will define a single Crowd administrator. It is advisable to give other people administration rights too, so that you do not run into problems when the single administrator is unavailable.
+  How do I do this? (click to expand)
+Make sure that the person is a member of the 'crowd-administrators' group. Please refer to the documentation.
+Important Next Steps
+11. Setting Up your Applications' Host Names
+When you set up your applications in step 3 above, you will have specified an IP address for each application. If JIRA, Confluence or any Crowd-connected application resides on a server that passes Crowd a host name instead of an IP address, you will need to tell Crowd the host name. Please refer to the documentation.
+12. Connecting to an External Database
+If you decided to use the default HSQLDB database when you set up Crowd, you need to switch to a production-ready database before using Crowd as a production system. HSQLDB is provided for evaluation purposes only. Please refer to the documentation.
+13. Backing Up your Crowd Data
+To back up your Crowd data and establish processes for regular backups, please refer to the documentation.
+Thank you for choosing Crowd.
+We are always happy to help. Feel free to email or call us with any questions you may have.
+
+
+
+
+
+
+
+
+
+FYI
+ 
